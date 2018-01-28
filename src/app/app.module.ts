@@ -12,6 +12,8 @@ import { FirebaseConfig } from '../credentials/firebase';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 
+import { UsuarioProvider } from '../providers/usuario/usuario';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -34,7 +36,8 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
     StatusBar,
     SplashScreen,
     AngularFireDatabase,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    UsuarioProvider
   ]
 })
 export class AppModule {}
