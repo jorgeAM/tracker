@@ -13,6 +13,7 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 
 import { UsuarioProvider } from '../providers/usuario/usuario';
+import { IonicStorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UsuarioProvider } from '../providers/usuario/usuario';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FirebaseConfig.firebase),
     AngularFireDatabaseModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

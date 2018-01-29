@@ -1,5 +1,6 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { IonicPage, NavController, Slides, LoadingController, AlertController } from 'ionic-angular';
+import { HomePage} from "../home/home";
 import { UsuarioProvider } from "../../providers/usuario/usuario";
 
 @IonicPage()
@@ -26,7 +27,7 @@ export class LoginPage implements AfterViewInit {
 
 
   ingresar(){
-
+    this.navCtrl.push(HomePage);
   }
 
   continuar(){
@@ -43,7 +44,7 @@ export class LoginPage implements AfterViewInit {
   showLoading(){
     let loader = this.loadingCtrl.create({
       content: 'Autenticando...',
-      duration: 2000
+      duration: 1500
     });
     loader.present();
   }
