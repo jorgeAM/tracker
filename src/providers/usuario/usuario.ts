@@ -42,7 +42,6 @@ export class UsuarioProvider {
         }).catch(err => console.log('hubo un error: ',err));
       }else {
         this.clave = localStorage.getItem('clave');
-        console.log(localStorage.getItem('clave'));
       }
   }
 

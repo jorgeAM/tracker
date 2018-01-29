@@ -13,7 +13,10 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/database';
 
 import { UsuarioProvider } from '../providers/usuario/usuario';
+import { UbicacionProvider } from '../providers/ubicacion/ubicacion';
+
 import { IonicStorageModule } from '@ionic/storage';
+import { Geolocation } from '@ionic-native/geolocation';
 
 @NgModule({
   declarations: [
@@ -38,8 +41,10 @@ import { IonicStorageModule } from '@ionic/storage';
     StatusBar,
     SplashScreen,
     AngularFireDatabase,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    UsuarioProvider
+    UsuarioProvider,
+    UbicacionProvider
   ]
 })
 export class AppModule {}
