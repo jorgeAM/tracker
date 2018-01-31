@@ -11,11 +11,14 @@ import { UbicacionProvider } from '../../providers/ubicacion/ubicacion';
 export class HomePage {
   usuario:any;
 
+  lat: any;
+  lng: any;
+
   constructor(
     public navCtrl: NavController,
     private afDB: AngularFireDatabase,
     private usuarioService: UsuarioProvider,
-    private ubicacionService: UbicacionProvider
+    private ubicacionService: UbicacionProvider,
   ) {
     this.usuario = this.afDB.object('/usuarios/'+this.usuarioService.clave);
   }
@@ -24,6 +27,8 @@ export class HomePage {
     this.ubicacionService.getPosicion()
       .subscribe(data => {
         console.log(data);
+        this.lat = data.coords.latitude
+        this.lng = data.coords.longitude
 
         this.usuario.update({
           latitud: data.coords.latitude,
@@ -32,5 +37,4 @@ export class HomePage {
 
       });
   }
-
 }

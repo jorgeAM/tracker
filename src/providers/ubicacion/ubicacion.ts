@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
-import { UsuarioProvider } from "../usuario/usuario";
 
 @Injectable()
 export class UbicacionProvider {

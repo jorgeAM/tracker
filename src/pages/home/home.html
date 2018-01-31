@@ -1,11 +1,13 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Mapa
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <div id="map"></div>
+  <agm-map [latitude]="lat" [longitude]="lng" [zoom]="15">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
 </ion-content>

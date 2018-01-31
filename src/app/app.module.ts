@@ -18,6 +18,8 @@ import { UbicacionProvider } from '../providers/ubicacion/ubicacion';
 import { IonicStorageModule } from '@ionic/storage';
 import { Geolocation } from '@ionic-native/geolocation';
 
+import { AgmCoreModule } from '@agm/core';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -29,7 +31,10 @@ import { Geolocation } from '@ionic-native/geolocation';
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FirebaseConfig.firebase),
     AngularFireDatabaseModule,
-    IonicStorageModule.forRoot()
+    IonicStorageModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCSz59nTIHYr0OCvfgk1Z0H6SLE6RijWzk'
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
