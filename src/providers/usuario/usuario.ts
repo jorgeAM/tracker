@@ -45,4 +45,8 @@ export class UsuarioProvider {
       }
   }
 
+  borrarUsuario(){
+    this.clave = null;
+    this.guardarStorage(this.clave);
+  }
 }
